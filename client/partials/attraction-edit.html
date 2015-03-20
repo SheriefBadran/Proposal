@@ -1,0 +1,19 @@
+<div class="col-md-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Update Attraction</h3>
+            </div>
+              <p> {{ edit.message}} </p>
+            <div class="panel-body">
+               <form novalidate name="edit.form" class="simple-form">
+                 Address: <br />
+                 <input type="address" ng-model="edit.address"/><br />
+                 <button data-ng-click="edit.updateAttraction()">Update attraction</button>
+               </form>
+            </div>
+         </div>
+     </div>
+
+ <label ng-repeat="tag in edit.tagList">
+  <input type="checkbox" name="selectedTags[]" value="{{tag.id}}" data-ng-model="tag.selected"/>{{tag.name | uppercase }}
+ </label>

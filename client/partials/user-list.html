@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Users</h3>
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+        <tr>
+          <td>{{users.message}}</td>
+        </tr>
+        <tr data-ng-repeat="u in users.userList">
+          <td>{{ u.username | uppercase }}</td>
+          <td><a data-ng-href="users/{{u.id}}">More info</a></td>
+        </tr>
+      </thead>
+     </table>
+  </div>
+</div>
